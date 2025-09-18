@@ -1,13 +1,13 @@
-import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Text, View } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
 function HomeScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Página Inicial</Text>
+      <Text>🏠 Home</Text>
     </View>
   );
 }
@@ -15,7 +15,7 @@ function HomeScreen() {
 function SettingsScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Configurações</Text>
+      <Text>⚙️ Configurações</Text>
     </View>
   );
 }
@@ -25,7 +25,7 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen name="Início" component={HomeScreen} />
-        <Tab.Screen name="Config" component={SettingsScreen} />
+        <Tab.Screen name="Configurações" component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
